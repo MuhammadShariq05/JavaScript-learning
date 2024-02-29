@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Example</title>
+  <style>
+    .example-class {
+      border: 1px solid #333;
+      padding: 10px;
+      margin: 5px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="element1" class="example-class">
+    <h4 onclick="console.log('Code 1')">Code 1</h4>Element 1</div>
+  <div id="element2" class="example-class"><h4>Code 2</h4>Element 2</div>
+  <div id="element3" class="class-remove"><h4>Code 3</h4>Element 3</div>
+  <div id="element4" class="example-class"><h4>Code 4</h4>Element 4</div>
+  <div id="element5" class="example-class"><h4>Code 5</h4>Element 5</div>
+  <div id="element6" class="example-class"><h4>Code 6</h4>Element 6</div>
+  <div id="element7" class="example-class"><h4>Code 7</h4>Element 7</div>
+  <div id="element8" class="example-class"><h4>Code 8</h4>Element 8</div>
+  <div id="element9" class="example-class"><h4>Code 9</h4>Element 9</div>
+  <div id="element10" class="example-class"><h4>Code 10</h4>Element 10</div>
+  
+  <!-- M1 for clicking message by using event handler -->
+  <button onclick="console.log('Hey im clicked')">Click Me</button>
+  <!-- M2 by creating a function in javascript -->
+  <button class="click 2" onclick="clickButton()">Click me 2</button>  
+  <script>
+    // Your JavaScript code interacting with these elements can go here
+    const elements = document.getElementsByClassName("example-class");
+    console.log(elements);
+    for(let i = 0; i<elements.length; i++){
+      elements.item(i).style.background="blue"
+    }
+
+    // const rem = document.querySelector(".class-remove");
+    // console.log(rem);
+    // rem.remove();
+
+    const ele = document.getElementsByClassName("class-remove");
+    for(let i = 0; i<ele.length;i++){
+      ele[i].remove("class-remove")
+    }
+    function clickButton(){
+      console.log("I am clicked from 2");
+      alert("Hey its an alert for u !");
+    }
+    
+
+  </script>
+
+</body>
+</html>

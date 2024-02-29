@@ -1,0 +1,53 @@
+<!-- Doing an Assignment on What are Event Listeners in Javascript? - DOM Manipulation Tutorial || Lect 16 -->
+<!-- Assignment is after clicking the click button the name should change to red/blue/any colour -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event listner</title>
+</head>
+<body>
+  <div class="Myname" id="changing-color"><h1>Muhammad Shariq</h1></div>
+  <button onclick="handleClick()" id="button1">Click me</button>
+
+  <div id="myContainer"></div><br>
+  <button id="clickbutton">Click Me 2</button>
+
+  <script>
+    const butn = document.getElementById("button1");
+    const nameBlock = document.getElementById("changing-color");
+    // Lets add toggle between the colors
+
+    butn.addEventListener("click", () =>{
+      console.log("Button clicked !");
+      if(nameBlock.style.color === "red"){
+        nameBlock.style.color = "blue"
+      } else{
+        nameBlock.style.color = "red";
+      }      
+    });
+  </script>
+ 
+ <!-- Second Assignment -->
+  <script>
+    // clicking the button will dynamically create a h1 or any text
+    let butt = document.getElementById("clickbutton");
+    let contain = document.getElementById("myContainer");
+
+    butt.addEventListener("click", () =>{
+      let userInt = prompt("Enter your name");
+      
+      if(userInt != null){
+        const el = document.createElement("h1");
+        el.innerText = userInt;
+        contain.appendChild(el);
+      }else{
+        alert("Canncelled");
+      }
+    });
+  </script>
+</body>
+</html>
+
