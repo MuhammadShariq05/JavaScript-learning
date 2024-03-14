@@ -49,3 +49,27 @@ const addsize5 = texteSizer(5);
 addsize20();
 
 button.addEventListener("click", addsize70);
+
+const counter = (function(){
+  let count = 0;
+  function changeBy(val){
+    count += val;
+  }
+  return{
+      increment(){
+        changeBy(1);
+      },
+      decrement(){
+        changeBy(-1);
+      },
+      value(){
+        return count;
+      }
+    }
+})();
+
+console.log(counter.value());
+counter.increment();
+console.log(counter.value());
+counter.increment();
+console.log(counter.value());
