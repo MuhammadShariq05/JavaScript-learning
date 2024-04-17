@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Color</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #options-container {
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+      }
+
+      #options-container > div {
+        height: 60px;
+        width: 60px;
+        margin: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      #options-container > div:hover {
+        scale: 1.2;
+        transition: 0.4s all;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="color-code"></h1>
+    </div>
+    <div>
+      <h4>Score: <span id="score"></span></h4>
+    </div>
+    <div id="options-container"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
